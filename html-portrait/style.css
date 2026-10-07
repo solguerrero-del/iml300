@@ -1,21 +1,25 @@
+
 body {
   background-image: url("assets/DomoKun.jpg");
+   font-family: "Mountains of Christmas", serif;
   background-size: cover;
   height: 100vh;
 }
+
+
 
 img {
   height: 150px;
   border-radius: 20px;
   padding: 10px;
   transition: 1s;
-  filter: grayscale(100%);
+  filter: blur(100%);
   /*      border: 3px solid blue; */
 }
 
 img:hover {
-  height: 400px;
-  filter: grayscale(0%);
+  height: 200px;
+  filter: invert(100%);
   /*   border: 1px solid red; */
 }
 
@@ -28,6 +32,15 @@ p:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.TEST {
+  color: white;
+}
+
+
+#internet {
+  color: black;
+  text-shadow: 2px 2px white;
 }
 
 h1,
