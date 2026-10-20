@@ -4,9 +4,15 @@ body {
   background-size: cover;
   height: 100vh;
 }
-
-img: hover {
-    height: 100vh
+img {
+    height: 50vh
+}
+img:hover {
+   height: 150vh;
+  border-radius: 20px;
+  padding: 10px;
+  transition: 1s;
+  filter: blur(100%);
 }
 
 .Text {
