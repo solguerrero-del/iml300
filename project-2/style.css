@@ -23,7 +23,9 @@ img:hover {
    height: 80vh;
   filter: blur(10px);
 }
-
+.NO {
+  background-color: black
+}
 .specialCenter {
   display: flex;
   flex-direction: column;
@@ -32,6 +34,7 @@ img:hover {
   min-height: 100vh;
   text-align: center;
 }
+
 
 .lost-page{
   display: flex;
