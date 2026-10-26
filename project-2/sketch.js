@@ -1,7 +1,7 @@
 let flakes = [];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight)
   noStroke();
 
   for (let i = 0; i < 200; i++) {
@@ -28,4 +28,5 @@ function draw() {
       f.x = random(width);
     }
   }
+   
 }

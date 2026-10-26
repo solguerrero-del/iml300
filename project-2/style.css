@@ -1,6 +1,14 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;   /* sends the snow behind your text */
+  display: block;
+}
+
 body {
+  color: snow;  
   place-items: center;
-  background-image: url(https://editor.p5js.org/solguerr/sketches/-fFKcgHm_);
    font-family: "Inconsolata", monospace;
   background-size: cover;
   height: 100vh;
@@ -13,7 +21,7 @@ img {
 }
 img:hover {
    height: 80vh;
-  filter: blur(100%);
+  filter: blur(10px);
 }
 
 .specialCenter {
