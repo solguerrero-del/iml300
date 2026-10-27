@@ -1,0 +1,128 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+}
+
+body {
+  margin: 0;
+  color: snow;
+  background-color: black;
+  place-items: center;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  /* a soft dark halo so the words stay readable over the snow */
+  text-shadow: 0 0 6px black, 0 0 14px black;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 1em;
+}
+
+/* homepage: a pause before the question */
+.question {
+  margin: 2.5em 0 1.6em;
+}
+
+p {
+  max-width: 36rem;
+  margin: 0.8em 0;
+}
+
+img {
+  height: 34vh;
+  border-radius: 20px;
+  padding: 10px;
+  opacity: 0.85;
+  transition: 1s;
+}
+/* scale grows the photo without pushing the text down, so the page doesn't scroll */
+img:hover {
+  transform: scale(1.5);
+  filter: blur(10px);
+}
+
+/* joyful words: each letter slowly changes color and hops (see joy.js) */
+.joy .word {
+  white-space: nowrap;
+}
+.joy .word span {
+  display: inline-block;
+  font-weight: 500;
+  animation: rainbow 4s linear infinite, hop 2s ease-in-out infinite;
+}
+@keyframes rainbow {
+  0%   { color: #ff8fa3; }
+  20%  { color: #ffc46b; }
+  40%  { color: #fff27a; }
+  60%  { color: #8ff0a4; }
+  80%  { color: #8fc8ff; }
+  100% { color: #ff8fa3; }
+}
+@keyframes hop {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+/* links: fogged like a memory, they clear up when you hover */
+a {
+  color: snow;
+  text-decoration: none;
+  opacity: 0.45;
+  filter: blur(1.6px);
+  transition: opacity 1.4s, filter 1.4s;
+}
+a:hover,
+a:focus-visible {
+  opacity: 1;
+  filter: blur(0);
+  outline: none;
+}
+
+/* text appearing slowly (see reveal.js) */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
+.fade-in {
+  animation: fade-in 2s ease backwards;
+}
+
+.NO {
+  background-color: black;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+}
+.specialCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centers them vertically */
+  min-height: 100vh;
+  padding: 3rem 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.lost-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centers the items horizontally */
+  justify-content: center; /* centers them vertically */
+  min-height: 100vh;
+  padding: 3rem 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
