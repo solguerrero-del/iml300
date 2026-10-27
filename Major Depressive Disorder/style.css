@@ -32,6 +32,14 @@ h1 {
 /* homepage: a pause before the question */
 .question {
   margin: 2.5em 0 1.6em;
+  background-color: black;
+  color: #161616;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-shadow:
+    -4px -4px 8px #d7d5c3,   /* light shadow, top left */
+     4px  4px 8px #151411;   /* dark shadow, bottom right */
 }
 
 p {
@@ -95,10 +103,23 @@ a:focus-visible {
   animation: fade-in 2s ease backwards;
 }
 
+ .NO {
+  background: #1a1a1a;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
 .NO {
   background-color: black;
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
+  margin: 0;
+  color: #161616;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-shadow:
+    -4px -4px 8px #d7d5c3,   /* light shadow, top left */
+     4px  4px 8px #151411;   /* dark shadow, bottom right */
 }
 .specialCenter {
   display: flex;
