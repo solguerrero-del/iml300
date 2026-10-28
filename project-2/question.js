@@ -26,6 +26,12 @@ let unlocked = false;
 function setup() {
   createCanvas(400, 400);
 
+  // put the canvas inside the centered holder
+  let c = drawingContext.canvas;
+  document.getElementById('game-holder').appendChild(c);
+  c.style.position = 'static';
+  c.style.zIndex = 'auto';
+
   rectMode(CENTER);
   fill(255);
   noStroke();
@@ -140,9 +146,9 @@ function awardPoint(side) {
   }
 }
 
-// Fades the canvas out, then stops the game and removes the canvas from layout
+// Fades the canvas out, then stops the game
 function fadeOutGame() {
-  let c = document.querySelector('canvas');
+  let c = drawingContext.canvas;
   c.style.transition = 'opacity ' + fadeTime / 1000 + 's ease';
   c.style.opacity = '0';
 

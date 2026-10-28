@@ -7,6 +7,13 @@
     <script src='sketch.js'></script>    
 <link rel="stylesheet" href="style.css" />
 <script src="reveal.js" defer></script>
+<audio id="song" src="Parfum.mp3" loop></audio>
+
+<script>
+  document.addEventListener('click', () => {
+    document.getElementById('song').play();
+  }, { once: true });
+</script>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
